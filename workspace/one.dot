@@ -6,7 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Hangman challenge</title>
   <style>
-    h1 span { display: none; }
+    h1 {display: none;}
     .good { color: green; }
     .bad { color: red; }
 
@@ -20,6 +20,7 @@
   </style>
   <link rel="stylesheet" href="./styles-less.css"/>
   <link rel="stylesheet" href="./styles-scss.css"/>
+  <link rel="stylesheet" href="hangman-styles.css">
 </head>
 <body>
   <div>
@@ -27,12 +28,25 @@
       <span class="less">LESS is working</span><br/>
       <span class="scss">SCSS is working</span><br/>
     </h1>
-    <p>Alphabet:
+    <div>
       {{~it.alphabet :letter:letterIndex}}
-      <span class="letter-{{=letter}}">{{=letter}}</span>
+      <label class="custom-checkbox">
+        <input type="checkbox" id="letter-{{=letter}}">
+        <span class="custom-checkmark">{{=letter}}</span>
+      </label>
+      <!-- <span class="letter-{{=letter}}">{{=letter}}</span> -->
+      {{~}}
+    </div>
+    <p class="alphabet">
+      {{~it.alphabet :letter:letterIndex}}
+      <label for="letter-{{=letter}}">
+        <span class="letter-{{=letter}} custom-box">{{=letter}}
+        </span>
+      </label>
       {{~}}
     </p>
-    <p>Alphabet:
+
+    <!-- <p>Alphabet:
       {{~it.alphabet :letter:letterIndex}}
       <span class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</span>
       {{~}}
@@ -58,7 +72,7 @@
     {{~it.lettersNotInWord :letter:letterIndex}}
       <span>{{=letter}}{{?letterIndex < it.numberOfLettersNotInWord - 1}},{{?}}</span>
     {{~}}
-    </p>
+    </p> -->
   </div>
 </body>
 </html>
