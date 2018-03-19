@@ -9,10 +9,10 @@
 }
 
 .custom-checkbox input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-  }
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
 
 .custom-checkbox {
   position: relative;
@@ -24,7 +24,7 @@
   display: inline-block;
   margin-right: 20px;
   font-size: 2em;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   visibility: hidden;
 }
 
@@ -44,8 +44,4 @@
 
 .custom-checkbox input:checked ~ .custom-checkmark {
   visibility: visible;
-}
-
-.custom-checkbox input:checked ~ #correct-letter {
-  color: yellow;
 }

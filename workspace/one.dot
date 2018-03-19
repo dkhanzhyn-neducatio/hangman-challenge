@@ -29,7 +29,7 @@
       <span class="scss">SCSS is working</span><br/>
     </h1>
     <div>
-      {{~it.alphabet :letter:letterIndex}}
+      {{~it.word :letter:letterIndex}}
       <label class="custom-checkbox">
         <input type="checkbox" id="letter-{{=letter}}">
         <span class="custom-checkmark">{{=letter}}</span>
@@ -52,10 +52,10 @@
       {{~}}
     </p>
 
-    <p>Number of words: {{=it.numWords}}</p>
+    <p>Number of words: {{=it.numWords}}</p> -->
 
-    <p>Word <span>{{=it.word}}</span><p>
-    <p>Number of letters: {{=it.numberOfLetters}}</p>
+    <!-- <p><span>{{=it.word}}</span><p> -->
+    <!-- <p>Number of letters: {{=it.numberOfLetters}}</p>
     <p>Letter by letter in word:
     {{~it.word :letter:letterIndex}}
       <span>{{=letter}}{{?letterIndex < it.numberOfLetters - 1}},{{?}} </span>
@@ -71,8 +71,8 @@
     <p>Letters not used in word:
     {{~it.lettersNotInWord :letter:letterIndex}}
       <span>{{=letter}}{{?letterIndex < it.numberOfLettersNotInWord - 1}},{{?}}</span>
-    {{~}}
-    </p> -->
+    {{~}} -->
+    </p>
   </div>
 </body>
 </html>
