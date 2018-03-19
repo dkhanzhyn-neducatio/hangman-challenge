@@ -1,0 +1,44 @@
+.alphabet {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  label {
+    flex-basis: 70px;
+  }
+}
+
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  input:checked ~ .custom-checkmark {
+    visibility: visible;
+  }
+}
+
+.custom-checkmark {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 2em;
+  visibility: hidden;
+  text-align: center;
+}
+
+.custom-box {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 35px;
+  margin-bottom: 20px;
+  background-color: lightgrey;
+  padding-top: 15px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0 5px #000;
+}

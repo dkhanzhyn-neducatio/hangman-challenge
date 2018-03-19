@@ -23,56 +23,20 @@
   <link rel="stylesheet" href="hangman-styles.css">
 </head>
 <body>
-  <div>
-    <h1>
-      <span class="less">LESS is working</span><br/>
-      <span class="scss">SCSS is working</span><br/>
-    </h1>
     <div>
       {{~it.word :letter:letterIndex}}
       <label class="custom-checkbox">
         <input type="checkbox" id="letter-{{=letter}}">
         <span class="custom-checkmark">{{=letter}}</span>
       </label>
-      <!-- <span class="letter-{{=letter}}">{{=letter}}</span> -->
       {{~}}
     </div>
     <p class="alphabet">
       {{~it.alphabet :letter:letterIndex}}
       <label for="letter-{{=letter}}">
-        <span class="letter-{{=letter}} custom-box">{{=letter}}
-        </span>
+        <span class="letter-{{=letter}} custom-box">{{=letter}}</span>
       </label>
       {{~}}
     </p>
-
-    <!-- <p>Alphabet:
-      {{~it.alphabet :letter:letterIndex}}
-      <span class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</span>
-      {{~}}
-    </p>
-
-    <p>Number of words: {{=it.numWords}}</p> -->
-
-    <!-- <p><span>{{=it.word}}</span><p> -->
-    <!-- <p>Number of letters: {{=it.numberOfLetters}}</p>
-    <p>Letter by letter in word:
-    {{~it.word :letter:letterIndex}}
-      <span>{{=letter}}{{?letterIndex < it.numberOfLetters - 1}},{{?}} </span>
-    {{~}}
-    </p>
-    <p>Number of unique letters used in word: {{=it.numberOfLettersInWord}}</p>
-    <p>Unique letters used in word:
-    {{~it.lettersInWord :letter:letterIndex}}
-      <span>{{=letter}}{{?letterIndex < it.numberOfLettersInWord - 1}},{{?}} </span>
-    {{~}}
-    </p>
-    <p>Number of letters not used in word: {{=it.numberOfLettersNotInWord}}</p>
-    <p>Letters not used in word:
-    {{~it.lettersNotInWord :letter:letterIndex}}
-      <span>{{=letter}}{{?letterIndex < it.numberOfLettersNotInWord - 1}},{{?}}</span>
-    {{~}} -->
-    </p>
-  </div>
 </body>
 </html>
